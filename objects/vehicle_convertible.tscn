@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dftqvq74q7tni"]
+
+[ext_resource type="PackedScene" uid="uid://dcwanjaahb4g1" path="res://models/prototyping/models/vehicle-convertible.glb" id="1_nl3r8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xv3v4"]
+size = Vector3(1.22831, 0.461487, 0.839188)
+
+[node name="vehicle-convertible" instance=ExtResource("1_nl3r8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00849342, 0.0283508, -0.00759125)
+shape = SubResource("BoxShape3D_xv3v4")

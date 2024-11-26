@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ec0f2yshtbq"]
+
+[ext_resource type="PackedScene" uid="uid://3j4trigy1pb2" path="res://models/prototyping/models/vehicle.glb" id="1_q4p38"]
+
+[node name="vehicle" instance=ExtResource("1_q4p38")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
