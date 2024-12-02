@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://3ec0f2yshtbq"]
+[gd_scene load_steps=3 format=3 uid="uid://3ec0f2yshtbq"]
 
 [ext_resource type="PackedScene" uid="uid://3j4trigy1pb2" path="res://models/prototyping/models/vehicle.glb" id="1_q4p38"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ni1mm"]
+size = Vector3(1.10668, 0.681351, 0.839188)
+
 [node name="vehicle" instance=ExtResource("1_q4p38")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024944, 0.138283, -0.00759125)
+shape = SubResource("BoxShape3D_ni1mm")

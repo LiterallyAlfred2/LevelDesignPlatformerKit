@@ -7,6 +7,7 @@
 size = Vector3(1, 1.5, 1)
 
 [node name="flag" groups=["Flag"] instance=ExtResource("1_oy8jh")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("2_mia7c")
 
 [node name="Area3D" type="Area3D" parent="." index="1"]

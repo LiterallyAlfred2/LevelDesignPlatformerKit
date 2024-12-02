@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjdcfwk1nqq6j"]
+[gd_scene load_steps=5 format=3 uid="uid://cjdcfwk1nqq6j"]
 
 [ext_resource type="PackedScene" uid="uid://cde1gdldoewyg" path="res://models/props/block-grass-overhang-large-tall.glb" id="1_3e8u2"]
+[ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_vwfc6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylqs6"]
+albedo_texture = ExtResource("2_vwfc6")
+distance_fade_mode = 1
+distance_fade_min_distance = 2.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vwwax"]
 size = Vector3(2.01398, 1.9986, 2.04883)
 
 [node name="block-grass-overhang-large-tall2" instance=ExtResource("1_3e8u2")]
+
+[node name="block-grass-overhang-large-tall" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ylqs6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
