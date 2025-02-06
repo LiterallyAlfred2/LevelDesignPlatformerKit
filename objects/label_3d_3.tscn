@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://37ylfxx1at4w"]
+
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="1_kfv3c"]
+
+[node name="Label3D" type="Label3D"]
+text = "Why do 
+you keep 
+fighting?"
+font = ExtResource("1_kfv3c")

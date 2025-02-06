@@ -1,14 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://os2uts0jffku"]
+[gd_scene load_steps=6 format=3 uid="uid://os2uts0jffku"]
 
 [ext_resource type="PackedScene" uid="uid://r4pt45l3s0rb" path="res://models/props/block-grass-overhang-large.glb" id="1_bycyx"]
+[ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_vduvg"]
+[ext_resource type="PackedScene" uid="uid://bunxb353h3lje" path="res://objects/damage_dealer_area_3d.tscn" id="3_q21d5"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vwwax"]
-size = Vector3(2.01398, 1.9986, 2.04883)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g565t"]
+albedo_texture = ExtResource("2_vduvg")
+uv1_scale = Vector3(3, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a6xi7"]
+size = Vector3(1.98911, 0.987105, 1.96106)
 
 [node name="block-grass-overhang-large2" instance=ExtResource("1_bycyx")]
+transform = Transform3D(20, 0, 0, 0, 10, 0, 0, 0, 20, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+[node name="block-grass-overhang-large" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g565t")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_vwwax")
+[node name="DamageDealerArea3D" parent="." index="1" instance=ExtResource("3_q21d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="CollisionShape3D" parent="DamageDealerArea3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0263824, 0.343552, 0.00579834)
+shape = SubResource("BoxShape3D_a6xi7")
+
+[editable path="DamageDealerArea3D"]

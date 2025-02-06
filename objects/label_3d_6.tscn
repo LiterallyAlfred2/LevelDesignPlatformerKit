@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://yudic02ifq60"]
+
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="1_yy887"]
+
+[node name="Label3D" type="Label3D"]
+text = "Look out,
+See what has
+happened here"
+font = ExtResource("1_yy887")

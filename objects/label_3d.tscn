@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgv1ust5eluhr"]
+
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="1_p8c38"]
+
+[node name="Label3D" type="Label3D"]
+text = "Do not go
+beyond this
+point"
+font = ExtResource("1_p8c38")

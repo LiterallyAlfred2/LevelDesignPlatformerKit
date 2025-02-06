@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyili526kv0n0"]
+
+[ext_resource type="PackedScene" uid="uid://duf6tmubs17m3" path="res://models/props/sign.glb" id="1_63fj1"]
+[ext_resource type="PackedScene" uid="uid://dgv1ust5eluhr" path="res://objects/label_3d.tscn" id="2_euuua"]
+
+[node name="sign2" instance=ExtResource("1_63fj1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Label3D" parent="." index="1" instance=ExtResource("2_euuua")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00154409, 0.404443, 0.0766785)

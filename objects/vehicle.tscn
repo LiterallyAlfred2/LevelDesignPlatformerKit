@@ -1,16 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://3ec0f2yshtbq"]
+[gd_scene load_steps=6 format=3 uid="uid://3ec0f2yshtbq"]
 
 [ext_resource type="PackedScene" uid="uid://3j4trigy1pb2" path="res://models/prototyping/models/vehicle.glb" id="1_q4p38"]
+[ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_b34s8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ee143"]
+albedo_texture = ExtResource("2_b34s8")
+uv1_offset = Vector3(-0.67, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqyfs"]
+albedo_texture = ExtResource("2_b34s8")
+uv1_offset = Vector3(-0.67, 0, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ni1mm"]
-size = Vector3(1.10668, 0.681351, 0.839188)
+size = Vector3(1.23693, 0.692743, 0.839188)
 
 [node name="vehicle" instance=ExtResource("1_q4p38")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="body" parent="." index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ee143")
+
+[node name="Group" parent="body" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_cqyfs")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024944, 0.138283, -0.00759125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015925, 0.143979, -0.00759125)
 shape = SubResource("BoxShape3D_ni1mm")

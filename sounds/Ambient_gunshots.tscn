@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs4akf247h13x"]
+
+[ext_resource type="AudioStream" uid="uid://0d4huvnbeh4t" path="res://sounds/warfare_battle_gun_fight.mp3" id="1_54sbn"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_54sbn")
+volume_db = -25.437
+autoplay = true

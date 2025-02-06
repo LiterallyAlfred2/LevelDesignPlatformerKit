@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://co25p3eq6fd8u"]
+
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="1_aidxi"]
+
+[node name="Label3D" type="Label3D"]
+text = "why do you 
+keep moving 
+forward?"
+font = ExtResource("1_aidxi")

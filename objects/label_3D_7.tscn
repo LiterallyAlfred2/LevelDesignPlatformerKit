@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfp4a1ga60ss0"]
+
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="1_qrd3t"]
+
+[node name="Label3D" type="Label3D"]
+text = "you have reached
+the end, but
+at what cost?"
+font = ExtResource("1_qrd3t")

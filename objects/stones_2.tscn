@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4a8262u5n7bj"]
+
+[ext_resource type="PackedScene" uid="uid://b8d1oe5olis7n" path="res://models/props/stones.glb" id="1_i7buq"]
+
+[node name="stones2" instance=ExtResource("1_i7buq")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

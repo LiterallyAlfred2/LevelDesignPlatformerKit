@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://b887bu7lg0v8j"]
+
+[ext_resource type="PackedScene" uid="uid://xy8rvnjp22n5" path="res://models/core_models/character.glb" id="1_b43gl"]
+[ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_ve0p1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqdvj"]
+albedo_texture = ExtResource("2_ve0p1")
+uv1_offset = Vector3(0.7, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ot5ne"]
+albedo_texture = ExtResource("2_ve0p1")
+uv1_offset = Vector3(0.7, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7xte"]
+albedo_texture = ExtResource("2_ve0p1")
+uv1_offset = Vector3(0.7, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fety0"]
+albedo_texture = ExtResource("2_ve0p1")
+uv1_offset = Vector3(0.7, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1w4v"]
+albedo_texture = ExtResource("2_ve0p1")
+uv1_offset = Vector3(0.7, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kt4t1"]
+albedo_texture = ExtResource("2_ve0p1")
+uv1_offset = Vector3(0.7, 0, 0)
+
+[node name="character2" instance=ExtResource("1_b43gl")]
+
+[node name="leg-left" parent="character/root" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pqdvj")
+
+[node name="leg-right" parent="character/root" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ot5ne")
+
+[node name="torso" parent="character/root" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_m7xte")
+
+[node name="arm-left" parent="character/root/torso" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fety0")
+
+[node name="arm-right" parent="character/root/torso" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_x1w4v")
+
+[node name="antenna" parent="character/root/torso" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_kt4t1")
